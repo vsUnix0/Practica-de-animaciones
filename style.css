@@ -1,0 +1,329 @@
+body{
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    place-items: center;
+
+    counter-reset: game;
+}
+
+input:checked{
+    counter-increment: game;
+}
+
+.total_count::after{
+    content: counter(game);
+}
+
+.phone{
+    position: relative;
+    border: 6px solid black;
+    border-radius: 20px;
+    width: 300px;
+    height: 600px;
+    background-color: #ccefff;
+    box-shadow: 0 10px 30px, 0 -0px 10px;
+}
+
+
+.total_count{
+    position: absolute;
+    left: 50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+.layer-2{
+    position: absolute;
+    z-index: 1;
+    height: 460px;
+    width: 80px;
+    background-color: transparent;
+    bottom: 0;
+    right: 60px;
+    border-radius: 20px;
+
+    animation-name: jump;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+
+
+.layer-1{
+    position: absolute;
+    z-index: 2;
+    height: 460px;
+    width: 80px;
+    background-color: transparent;
+    bottom: 0;
+    left: 60px;
+    border-radius: 20px;
+
+    animation-name: jump;
+    animation-duration: 0.7s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+
+
+
+input[type=checkbox]{
+    appearance: none;
+    z-index: 1;
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    cursor: pointer;
+}
+
+.layer-3{
+    position: absolute;
+    z-index: 3;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 220px;
+    height: 400px;
+    background-color: #3C2515;
+    bottom: 0;
+    border-radius: 14px;
+    box-shadow: 0px -12px #23904F;
+}
+
+.zigzag:after{
+    content: "";
+    width: 100%;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    height: 30px;
+    background: linear-gradient(135deg, #23904F 25%, transparent 25%) -50px 0,
+        linear-gradient(-135deg, #23904F 25%, transparent 25%) -50px 0,
+        linear-gradient(45deg, #23904F 1%, transparent 25%),
+        linear-gradient(-45deg, #23904F 1%, transparent 25%);
+    background-size: 100px 100px;
+}
+
+.layer-4{
+    position: absolute;
+    z-index: 4;
+    background-color: transparent;
+    height: 360px;
+    width: 80px;
+    bottom: 0;
+    left: 30px;
+    border-radius: 20px;
+
+    animation-name: jump;
+    animation-duration: 1.3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+.layer-5{
+    position: absolute;
+    z-index: 5;
+    background-color: #3C2515;
+    margin: 0 auto;
+    width: 150px;
+    height: 300px;
+    bottom: 0;
+    box-shadow: 0px -11px #23904F, 0.6px 1px black;
+    border-radius: 14px;
+}
+
+.layer-6{
+    position: absolute;
+    z-index: 6;
+    background-color: transparent;
+    height: 260px;
+    width: 80px;
+    bottom: 0;
+    right: 60px;
+    border-radius: 20px;
+
+    animation-name: jump;
+    animation-duration: 0.9s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+.layer-7{
+    position: absolute;
+    z-index: 7;
+    background-color: #3C2515;
+    height: 200px;
+    width: 200px;
+    bottom: 0;
+    right: 0px;
+    box-shadow: 0px -11px #23904F, -0.6px 1px black;
+    border-radius: 14px;
+}
+
+.layer-8{
+    position: absolute;
+    z-index: 8;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    background-color: #23904F;
+    height: 40px;
+    width: 150px;
+    bottom: 0px;
+}
+
+.layer-9{
+    position: absolute;
+    z-index: 9;
+    background-color: white;
+    height: 90px;
+    width: 80px;
+    bottom: 0;
+    border-radius: 40px 40px 0 15px;
+}
+
+.cloud-left{
+    background-color: white;
+    position: absolute;
+    z-index: 10;
+    height: 55px;
+    width: 70px;
+    left: 50px;
+    bottom: 0;
+    border-radius: 80px;
+}
+
+.layer-10{
+    position: absolute;
+    z-index: 11;
+    background-color: white;
+    height: 90px;
+    width: 80px;
+    bottom: 0;
+    border-radius: 40px 40px 15px 0;
+    right: 0;
+}
+
+.cloud-right{
+    background-color: white;
+    position: absolute;
+    z-index: 12;
+    right: 50px;
+    bottom: 0;
+    height: 55px;
+    width: 70px;
+    border-radius: 80px;
+
+}
+
+.outher_left_ear1{
+    position: absolute;
+    background-color: white;
+    border-radius: 90px;
+    width: 20px;
+    height: 50px;
+    left: 10px;
+
+
+}
+
+.inner_left_ear1{
+    background-color: pink;
+    position: absolute;
+    border-radius: 90px;
+    width: 10px;
+    height: 50px;
+    left: 5px;
+    top: 9px;
+}
+
+.outher_right_ear1{
+    background-color: white;
+    position: absolute;
+    height: 50px;
+    width: 20px;
+    right: 10px;
+    border-radius: 90px;
+}
+
+.inner_right_ear1{
+    background-color: pink;
+    position: absolute;
+    border-radius: 90px;
+    height: 50px;
+    width: 10px;
+    right: 5px;
+    top: 9px;
+}
+
+.head1{
+    position: absolute;
+    background-color: white;
+    height: 50px;
+    width: 90%;
+    border-radius: 200px;
+    left: 4px;
+    top: 18px;
+}
+
+
+.eye_left1{
+    background-color: black;
+    position: absolute;
+    height: 4px;
+    width: 4px;
+    left: 22px;
+    border-radius: 100px;
+    top: 12px;
+    
+    animation-name: blink;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+
+
+.eye_right1{
+    background-color: black;
+    position: absolute;
+    height: 4px;
+    width: 4px;
+    right: 22px;
+    border-radius: 100px;
+    top: 12px;
+
+    animation-name: blink;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes blink{
+    0%{
+        height: 4px;
+    }
+
+    5%{
+        height: 2.5px;
+    }
+
+    6%{
+        height: 0.5px;
+    }
+}
+
+
+@keyframes jump{
+    0%{
+        bottom: 0;
+    }
+    25%{
+        bottom: -60px;
+    }
+    100%{
+        bottom: 0;
+    }
+}
